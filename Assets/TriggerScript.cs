@@ -18,7 +18,7 @@ public class TriggerScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("ENTERED");
+        //Debug.Log("ENTERED");
         if (collision.CompareTag("Speed"))
         {
             GetComponent<NavMeshAgent>().speed = 10;
@@ -34,7 +34,7 @@ public class TriggerScript : MonoBehaviour
             {
                 materialIndex = materialHolder.Length - 1;
             }
-            Debug.Log("setting, " + materialIndex + " to: " + materialHolder[materialIndex].name);
+            //Debug.Log("setting, " + materialIndex + " to: " + materialHolder[materialIndex].name);
             Material[] newMaterials = { materialHolder[materialIndex] };
             playerMaterial.materials = newMaterials;
         }
@@ -42,7 +42,7 @@ public class TriggerScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("EXITED");
+        //Debug.Log("EXITED");
         if (other.CompareTag("Speed"))
         {
             GetComponent<NavMeshAgent>().speed = 3.5f;
